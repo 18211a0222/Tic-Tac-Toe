@@ -1,4 +1,5 @@
 # Tic-Tac-Toe
+Changes for Different size Grid.
 line 19 int[][] row = { { 0, 0 }, { 0, 0 }, { 0, 0 } };
 There are three arrays with two elements in it, the number of arrays = n or num. of rows in the grid 
 (where n is the size of grid)
@@ -52,3 +53,5 @@ the win condition will be the size of the grid i.e.., n here n = 3.
  
 line 26 while (count < 9)
 the game end condition will be n * n (where n is the size of the grid), here 3 * 3 = 9.
+
+The PrintGrid can be changed based on the size of Grid.
