@@ -34,14 +34,15 @@ public class TicTacToe {
 				//flag is used to increase the first or second elem based on the 'X' or 'O'
 				col[j][flag] += 1; // also in the column, the flag is used to update the first or second element in the array depending on 'X' or 'O'
 				if ((i + j) % 2 == 0) { // using 0 based index, the sum of diagonal coordinates are divisible by 2
-					if (i == 1) { // if the position is 1 1, it is in both diagonals so we update it's value in both diagonals
+					if (i == 1 && j == 1) { // if the position is 1 1 for 3 X 3 grid, it is in both diagonals so we update it's value in both diagonals
 						diagonal[0][flag] += 1;
 						diagonal[1][flag] += 1;
 						temp = Math.max(diagonal[0][flag], diagonal[1][flag]);
 					} else if ((i + j) == 2) { // coordinates like 1 1, 0 2, 2 0 are on diagonal and add upto 2. consider this as first diagonal
 						diagonal[0][flag] += 1;
 						temp = diagonal[0][flag];
-					} else { // coordinates like 0 0, 1 1, 2 2 are on the other diagonal, consider this as second diagonal
+					} else if(i == j)
+					{ // coordinates like 0 0, 1 1, 2 2 are on the other diagonal and has i = j property, consider this as second diagonal
 						diagonal[1][flag] += 1;
 						temp = diagonal[1][flag]; // whatever value is updated is stored in temp
 					}
