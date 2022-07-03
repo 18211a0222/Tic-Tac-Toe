@@ -27,7 +27,7 @@ line 37 if (i == 1 && j == 1) if it is 5 X 5 grid replace the 1 with 2 as it is 
 line 41 else if ((i + j) == 2) for grid 3 X 3 the n - 1 is 2, so the sum of i + j == 2. for 5 X 5 the n - 1 is 4, need to replace i + j == 4
 this take cares of elements like 40,31,13,04 only these elements add upto n-1 in the grid.
 rest all elements like 00,11,22,33,44 has the property of i = j, hence the elements like 02,20,24,42 are not treated as diagonal elements even the sum is divsible by 2
-line 44 else if(i == j) is responsible for the other diagonal elements mentioned above.
+line 44 else if(i == j) is responsible for the other diagonal elements mentioned above
 
 for a grid of even number like 4 X 4, there woudln't be any middle element present in both diagonals, the grid will look like
 00 01 02 03
