@@ -82,8 +82,7 @@ public class TicTacToeGrid {
 	
 	public int LeftDiagonal(int i, int j)
 	{
-		if (i == 1) 
-		{
+		if (i == 1) {
 			this.increaseCount(this.getDiagonal(), 0, this.getFlag());
 			this.increaseCount(this.getDiagonal(), 1, this.getFlag());
 			return Math.max(this.getDiagonal()[0][this.getFlag()], this.getDiagonal()[1][this.getFlag()]);
@@ -94,8 +93,7 @@ public class TicTacToeGrid {
 	
 	public int RightDiagonal(int i, int j)
 	{
-		if ((i + j) == 2)
-		{
+		if ((i + j) == 2) {
 			this.increaseCount(this.getDiagonal(), 0, this.getFlag());
 			return this.getDiagonal()[0][getFlag()];
 		}
@@ -103,7 +101,7 @@ public class TicTacToeGrid {
 	}
 	
 	public void DidThePlayerWin(int i, int j, int temp)
-	{
+	{	
 		if (this.getRow()[i][this.getFlag()] == 3 || this.getCol()[j][this.getFlag()] == 3 || temp == 3) {
 			System.out.println("\nPlayer '" + this.getCurrentplayer() + "' won!");
 			this.setEmptyspaces(9); 
@@ -121,7 +119,7 @@ public class TicTacToeGrid {
 	}
 
 	public void MarkItOnGrid(int i, int j) {
-		if (this.getGrid()[i][j] == ' ') 
+		if (this.getGrid()[i][j] == ' ')
 		{
 			this.setGrid(i, j);
 			this.PrintGrid(this.getGrid());
@@ -134,7 +132,7 @@ public class TicTacToeGrid {
 			this.setEmptyspaces(this.getEmptyspaces());
 		} 
 		else 
-		{
+		{	
 			System.out.println("This move at (" + (i + 1) + "," + (j + 1) + ") is not valid. Try again...");
 		}
 	}
