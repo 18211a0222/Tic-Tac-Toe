@@ -109,13 +109,11 @@ public class TicTacToeGrid {
 	}
 	
 	public void PrintGrid(char[][] Grid) {
-		String[] arr = { " " + Grid[0][0] + " " + "| " + Grid[0][1] + " |" + " " + Grid[0][2] + " ", "-----------",
-				" " + Grid[1][0] + " " + "| " + Grid[1][1] + " |" + " " + Grid[1][2] + " ", "-----------",
-				" " + Grid[2][0] + " " + "| " + Grid[2][1] + " |" + " " + Grid[2][2] + " " };
-		System.out.println();
-		for (int j = 0; j < 5; j++) {
-			System.out.println(arr[j]);
-		}
+		System.out.println("\n " + Grid[0][0] + " " + "| " + Grid[0][1] + " |" + " " + Grid[0][2] + " ");
+		System.out.println("-----------");
+		System.out.println(" " + Grid[1][0] + " " + "| " + Grid[1][1] + " |" + " " + Grid[1][2] + " ");
+		System.out.println("-----------");
+		System.out.println(" " + Grid[2][0] + " " + "| " + Grid[2][1] + " |" + " " + Grid[2][2] + " ");
 	}
 
 	public void MarkItOnGrid(int i, int j) {
